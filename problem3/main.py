@@ -1,6 +1,8 @@
 def join_array_remove_duplicate(arrayA, arrayB):
     # your code here
-    return []
+    unique_combined_array = list(set(arrayA + arrayB))
+    return unique_combined_array
+
 
 if __name__ == '__main__':
     # Test cases
