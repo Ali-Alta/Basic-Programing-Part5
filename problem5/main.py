@@ -1,5 +1,17 @@
 def pair_sum(arr, target):
-    return []
+    left, right = 0, len(arr) - 1
+
+    while left < right:
+        current_sum = arr[left] + arr[right]
+        
+        if current_sum == target:
+            return [left, right]
+        elif current_sum < target:
+            left += 1
+        else:
+            right -= 1
+    return[]
+
 
 if __name__ == '__main__':
     print(pair_sum([1, 2, 3, 4, 6], 6)) # [1, 3]
